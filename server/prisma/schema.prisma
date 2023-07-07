@@ -1,0 +1,120 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "mysql"
+  url      = env("DATABASE_URL")
+}
+
+model User{
+  id String @id 
+  firstName String 
+  lastName String
+  userName String @unique
+  email String @unique
+  password String @db.VarChar(255)
+  role String @default("user")
+  idNumber Int @unique
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  generalAccount GeneralAccount?
+  savingsAccount SavingsAccount?
+  refreshToken RefreshTokens[]
+
+  @@unique([id,userName])
+
+}
+
+model GeneralAccount{
+  id String @id
+  balance String
+  accountNumber Int @unique
+  status String @default("active")
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  user User @relation(fields: [userId,userName], references: [id,userName])
+  userId  String @unique
+  userName String @unique
+  deposits GeneralDeposits[]
+  withdraws GeneralWithdrawals[]
+  chequeBook ChequeBooks?
+
+  @@unique([userId,userName])
+}
+
+model GeneralDeposits{
+  id String @id
+  amount String 
+  status String @default("pending")
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  account GeneralAccount @relation(fields: [accountId], references: [id])
+  accountId String 
+}
+
+model GeneralWithdrawals{
+  id String @id
+  amount String 
+  status String @default("pending")
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  account GeneralAccount @relation(fields: [accountId], references: [id])
+  accountId String
+}
+
+model ChequeBooks{
+  id String @id
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  account GeneralAccount @relation(fields: [accountId], references: [id])
+  accountId String @unique
+}
+
+model SavingsAccount{
+  id String @id
+  balance String
+  accountNumber Int @unique
+  status String @default("active")
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  user User @relation(fields: [userId, userName], references: [id, userName])
+  userId String @unique
+  userName String @unique
+  deposits SavingsDeposits[]
+  withdrawals SavingsWithdrawals[]
+
+  @@unique([userId,userName])
+}
+
+model SavingsDeposits{
+  id String @id
+  amount String 
+  status String @default("pending")
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  account SavingsAccount @relation(fields: [accountId], references: [id])
+  accountId String 
+}
+
+model SavingsWithdrawals{
+  id String @id
+  amount String 
+  status String @default("pending")
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  account SavingsAccount @relation(fields: [accountId], references: [id])
+  accountId String
+}
+
+model RefreshTokens{
+  id String @id
+  token String @db.VarChar(255)
+  createdAt DateTime @default(now())
+  modifiedAt DateTime @updatedAt
+  user User @relation(fields: [userId], references: [id])
+  userId String
+}
