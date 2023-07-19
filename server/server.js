@@ -7,17 +7,22 @@ const corsOptions =  require('./configs/cors');
 const cors = require('cors');
 const { logger } = require('./middlewares/logger');
 const errHandler = require('./middlewares/errHandler');
+const cookieParser = require('cookie-parser');
 
 // Form data urlencodede parsing
+app.use(cookieParser())
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({extended: false }));
 
 // Cors & logger set up 
 app.use(cors(corsOptions));
-app.use(logger)
+// app.use(logger)
 
+// Routes
 
-
+// User Routes
+app.use('/user/register', require('./routes/users/register'));
+app.use('/user/login', require('./routes/users/login'));
 
 app.use(errHandler)
 app.listen(process.env.STAGING_PORT,() => {

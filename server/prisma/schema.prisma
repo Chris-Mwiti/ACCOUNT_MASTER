@@ -112,7 +112,7 @@ model SavingsWithdrawals{
 
 model RefreshTokens{
   id String @id
-  token String @db.VarChar(255)
+  token String @db.VarChar(255) @unique
   createdAt DateTime @default(now())
   modifiedAt DateTime @updatedAt
   user User @relation(fields: [userId], references: [id])

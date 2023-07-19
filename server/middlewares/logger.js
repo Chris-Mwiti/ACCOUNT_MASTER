@@ -2,6 +2,7 @@ const fs = require('fs');
 const fsPromises = require('fs').promises
 const { format } = require('date-fns');
 const { randomUUID } = require('crypto');
+const path = require('path');
 
 const logEvents = async(message,file) => {
     const dateTime  = `${format(new Date(), 'yyMMdd\tHH:mm:ss')}`;

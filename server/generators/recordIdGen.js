@@ -1,12 +1,10 @@
-const recordIdGenerator = (() => {
-    let counter = 1
-    return (prefix) => {
-        const code = `${prefix}${String(counter).padStart(3, '0')}`;
-        counter++;
-        console.log(code)
-        return code
-    }
-})();
+const { v4: uuidv4 } = require('uuid')
+
+const recordIdGenerator = (prefix) => {
+    const id = uuidv4();
+    const recordId = `${prefix}_${id}`
+    return recordId
+}
 
 
 module.exports = recordIdGenerator;

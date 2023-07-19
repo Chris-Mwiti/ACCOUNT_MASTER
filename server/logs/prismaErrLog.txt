@@ -1,0 +1,22 @@
+230720	01:31:29	 58b09441-ce77-4a78-b699-1377f602ebbf	500	
+Invalid `this.tokenClient.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Tokens.js:14:24
+
+  11 
+  12 async addRefreshToken() {
+  13   const [data, error] = await TryCatchHelper(() =>
+→ 14     this.tokenClient.create({
+           data: {
+             token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVVNSXzYxMzYyM2VhLWViNmEtNDI3Yi04Yzg3LTQ3MDA5YzMyYTkyNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg5ODA1ODg5LCJleHAiOjE2ODk4OTIyODl9.tEDSobew0V_AnxuNT7JERsc1Xt8SvkK7O3hKuvCB2_Y',
+             userId: 'USR_613623ea-eb6a-427b-8c87-47009c32a926',
+         +   id: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument id for data.id is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
