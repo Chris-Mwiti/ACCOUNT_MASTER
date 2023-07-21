@@ -4,6 +4,7 @@ const ResponseHandler = require("../helpers/modelResponseHandlers");
 const RefreshTokenModel = require("../models/Tokens");
 const UsersModel = require("../models/Users");
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 class RegisterController {
     constructor(req, res) {
@@ -12,10 +13,9 @@ class RegisterController {
     }
 
     async createUser() {
-        const {firstname,lastname,username,email,password,role,idNumber} = this.req.body
+        const {firstname,lastname,username,email,password,role,idNumber,phone} = this.req.body
         const hashedPwd = await bcrypt.hash(password, 10);
-        console.log(hashedPwd,lastname);
-        const userModel = new UsersModel(firstname, lastname, username, email, hashedPwd, role, idNumber);
+        const userModel = new UsersModel(firstname, lastname, username, email, hashedPwd, role, idNumber,phone);
         const [data,error] = await TryCatchHelper(() => userModel.createNewUser());
         if(error) return this.res.status(500).json({err: "Error while creating user"});
         new ResponseHandler(data,this.res).postResponse()
@@ -40,6 +40,8 @@ class RegisterController {
       return this.res.cookie('refreshToken', refreshToken, {httpOnly: true, maxAge: 24 * 60 * 60 * 1000}).status(200).json({msg: "Success"});
 
     }
+
+    
 
 }
 

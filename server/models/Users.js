@@ -4,18 +4,18 @@ const recordldGenerator = require("../generators/recordIdGen");
 const prismaErrHandler = require("../errors/handlers/prismaErrHandler");
 
 class UsersModel {
-  constructor(firstname, lastname, username, email, password, role, idNumber) {
+  constructor(firstname, lastname, username, email, password, role, idNumber,phone) {
     (this.firstname = firstname),
       (this.lastname = lastname),
       (this.username = username),
       (this.email = email),
       (this.password = password),
       (this.role = role),
-      (this.idNumber = idNumber);
+      (this.idNumber = idNumber),
+      (this.phone = phone);
   }
 
   async createNewUser() {
-    console.log(this.lastname);
     const [data, error] = await TryCatchHelper(() =>
       prisma.user.create({
         data: {
@@ -27,10 +27,11 @@ class UsersModel {
           password: this.password,
           role: this.role,
           idNumber: this.idNumber,
+          phone: this.phone
         }
       })
     );
-    if (error) console.error(error);
+    if (error) prismaErrHandler(error);
 
     return data;
   }

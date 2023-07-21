@@ -20,3 +20,798 @@ Argument id for data.id is missing.
 Note: Lines with + are required, lines with ? are optional.
 
 
+230720	13:45:45	 ed24a076-44f3-44fd-b329-956ea41d1e3b	500	
+Invalid `this.tokenClient.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Tokens.js:14:24
+
+  11 
+  12 async addRefreshToken() {
+  13   const [data, error] = await TryCatchHelper(() =>
+→ 14     this.tokenClient.create({
+           data: {
+             token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVVNSX2UyOGRmNzI4LTgyYTktNDRhOS04OWExLWY5OTY1ZTY0NTk4NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4OTg0OTk0NSwiZXhwIjoxNjg5OTM2MzQ1fQ.YUUVziVyEDiZyKXNoDcNKANf0LXQjee6AGIz0Gfin_A',
+             userId: 'USR_e28df728-82a9-44a9-89a1-f9965e645985',
+         +   id: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument id for data.id is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230720	13:48:28	 d84080b7-a0fe-4296-9ea1-8ffbe31d1938	500	
+Invalid `this.tokenClient.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Tokens.js:14:24
+
+  11 
+  12 async addRefreshToken() {
+  13   const [data, error] = await TryCatchHelper(() =>
+→ 14     this.tokenClient.create({
+           data: {
+             token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVVNSXzYxMzYyM2VhLWViNmEtNDI3Yi04Yzg3LTQ3MDA5YzMyYTkyNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg5ODUwMTA4LCJleHAiOjE2ODk5MzY1MDh9.dR2Pos1cqdZGcduM2v6N3mZnFZtYkzMdTICgTFT8OWw',
+             userId: 'USR_613623ea-eb6a-427b-8c87-47009c32a926',
+         +   id: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument id for data.id is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230720	15:14:51	 1bec7b44-7828-4bd0-8330-e241c1bde188	500	
+Invalid `this.tokenClient.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Tokens.js:14:24
+
+  11 
+  12 async addRefreshToken() {
+  13   const [data, error] = await TryCatchHelper(() =>
+→ 14     this.tokenClient.create({
+           data: {
+             token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVVNSXzYxMzYyM2VhLWViNmEtNDI3Yi04Yzg3LTQ3MDA5YzMyYTkyNiIsInJvbGUiOiJ1c2VyIiwiaWF0IjoxNjg5ODU1MjkxLCJleHAiOjE2ODk5NDE2OTF9.cQtuG2FKsUHf-FaHLKNkYOgD1POb2R6chmRaZrDYWDI',
+             userId: 'USR_613623ea-eb6a-427b-8c87-47009c32a926',
+         +   id: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument id for data.id is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230720	15:22:55	 40745afe-91c9-40f3-8d1c-bb646f05ff38	500	
+Invalid `this.tokenClient.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Tokens.js:14:24
+
+  11 
+  12 async addRefreshToken() {
+  13   const [data, error] = await TryCatchHelper(() =>
+→ 14     this.tokenClient.create({
+           data: {
+             token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVVNSX2UyOGRmNzI4LTgyYTktNDRhOS04OWExLWY5OTY1ZTY0NTk4NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4OTg1NTc3NSwiZXhwIjoxNjg5OTQyMTc1fQ.yig2OMYpUdLrM8GkurY0Vh1wciL7AAIkdq3rqClA3CA',
+             userId: 'USR_e28df728-82a9-44a9-89a1-f9965e645985',
+         +   id: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument id for data.id is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230720	15:45:34	 55ac00a7-e279-4abb-a438-c72fdcee862b	500	
+Invalid `this.tokenClient.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Tokens.js:14:24
+
+  11 
+  12 async addRefreshToken() {
+  13   const [data, error] = await TryCatchHelper(() =>
+→ 14     this.tokenClient.create({
+           data: {
+             token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2lkIjoiVVNSX2UyOGRmNzI4LTgyYTktNDRhOS04OWExLWY5OTY1ZTY0NTk4NSIsInJvbGUiOiJhZG1pbiIsImlhdCI6MTY4OTg1NzEzMiwiZXhwIjoxNjg5OTQzNTMyfQ.QU1Ti7qaNpEMQWGu_E3Z-w8d7LqAVGiB4M32zHnogRI',
+             userId: 'USR_e28df728-82a9-44a9-89a1-f9965e645985',
+         +   id: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument id for data.id is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230720	18:55:05	 62cfc547-bc5d-4b0f-b673-6aacfefcbc54	500	
+Invalid `prisma.user.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:20:19
+
+  17 
+  18 async createNewUser() {
+  19   const [data, error] = await TryCatchHelper(() =>
+→ 20     prisma.user.create({
+           data: {
+             id: 'USR_037137cc-48db-4a10-8824-5ce6dc84a253',
+             firstName: 'Adam',
+             lastName: 'James',
+             userName: 'Adams',
+             email: 'adam@gmail.com',
+             password: '$2b$10$cDqX1kM8GhBwFBeZlvWg/.5lQnmvaMooA16f4QfW6/lQ61GnztlPe',
+             role: 'admin',
+             idNumber: 87654321,
+         +   phone: Int,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   generalAccount?: {
+         ?     create?: GeneralAccountCreateWithoutUserInput | GeneralAccountUncheckedCreateWithoutUserInput,
+         ?     connectOrCreate?: GeneralAccountCreateOrConnectWithoutUserInput,
+         ?     connect?: GeneralAccountWhereUniqueInput
+         ?   },
+         ?   savingsAccount?: {
+         ?     create?: SavingsAccountCreateWithoutUserInput | SavingsAccountUncheckedCreateWithoutUserInput,
+         ?     connectOrCreate?: SavingsAccountCreateOrConnectWithoutUserInput,
+         ?     connect?: SavingsAccountWhereUniqueInput
+         ?   },
+         ?   refreshToken?: {
+         ?     create?: RefreshTokensCreateWithoutUserInput | RefreshTokensCreateWithoutUserInput | RefreshTokensUncheckedCreateWithoutUserInput | RefreshTokensUncheckedCreateWithoutUserInput,
+         ?     connectOrCreate?: RefreshTokensCreateOrConnectWithoutUserInput | RefreshTokensCreateOrConnectWithoutUserInput,
+         ?     createMany?: RefreshTokensCreateManyUserInputEnvelope,
+         ?     connect?: RefreshTokensWhereUniqueInput | RefreshTokensWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument phone for data.phone is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:04:07	 723be44d-1048-4edd-812c-6f91d2c363f8	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:04:07	 095b4e96-ab32-4b3f-84f5-d1fb6c679e0b	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_98b7a855-cc78-4820-8e93-cdd1aee749f6',
+             balance: 700,
+                      ~~~
+             accountNumber: NaN,
+                            ~~~
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument balance: Got invalid value 700 on prisma.createOneGeneralAccount. Provided Int, expected String.
+Argument accountNumber: Got invalid value NaN on prisma.createOneGeneralAccount. Provided Float, expected Int.
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:10:24	 8a48a407-9862-4899-ac08-7bc43d463ac6	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:10:24	 175fc9e4-2276-4315-bb48-7473395ebcea	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_863718ad-1055-4247-ab2e-1257fe01894f',
+             balance: 700,
+                      ~~~
+             accountNumber: 8053724169,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument balance: Got invalid value 700 on prisma.createOneGeneralAccount. Provided Int, expected String.
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:16:08	 f4f54fd4-b31f-4a20-adef-41b1bcd6929f	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:16:08	 730504df-7b59-409c-afc9-7dd33d69db78	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_01887181-5e4f-4838-90fa-e40793a76421',
+             balance: 700,
+             accountNumber: 759423861,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:18:22	 a91a5a4e-e9ed-4b2d-9c2d-1597f87a336c	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:18:22	 c75dacfe-62f7-4fa2-bc67-c8d6555387d2	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_c1a863d6-f0b7-49a5-afad-7e41edfdf14f',
+             balance: 700,
+             accountNumber: 1085472693,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:20:40	 b568aae3-331a-44d5-91a7-7513425a0cc3	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:20:40	 ea0aaf4a-7ac0-4d9f-8d24-d4e3d770096c	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_6ea7bd80-9657-45d5-8a1b-a586ed0e5398',
+             balance: 700,
+             accountNumber: 4603528197,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:23:50	 dbf1af97-ecb8-4d5c-a343-7d540e13062f	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:23:50	 98941019-7bba-457c-be91-841d8000fa22	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_791be9e4-895b-4ac0-978d-e9c825746a52',
+             balance: 700,
+             accountNumber: 8014523967,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:25:16	 b1f67c04-5944-4bf6-a3a8-33aa8122b8b1	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:25:16	 b53e845b-d727-4ad6-ad8a-0eba4f6a7c7c	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_a04d78c0-5222-437b-a326-e7297ca74971',
+             balance: 700,
+             accountNumber: 7185936402,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	12:26:24	 387fe37e-17e3-4d36-9409-610b7a9cb7e2	500	
+Invalid `prisma.user.findUnique()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Users.js:47:19
+
+  44 
+  45 async getUserById(id) {
+  46   const [data, error] = await TryCatchHelper(() =>
+→ 47     prisma.user.findUnique({
+           where: {
+         ?   id?: String,
+         ?   userName?: String,
+         ?   email?: String,
+         ?   idNumber?: Int,
+         ?   phone?: Int,
+         ?   id_userName?: UserIdUserNameCompoundUniqueInput
+           }
+         })
+
+Argument where of type UserWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	12:26:24	 73329a3e-1541-499a-a069-58513c58d5de	500	
+Invalid `prisma.generalAccount.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:17:29
+
+  14 
+  15 async createAccount() {
+  16   const [data, error] = await TryCatchHelper(() =>
+→ 17     prisma.generalAccount.create({
+           data: {
+             id: 'GEN_c22338b0-70bb-44d8-a6f0-cd29c1a56a77',
+             balance: 700,
+             accountNumber: 6120895743,
+             userId: undefined,
+             userName: undefined,
+         +   user: {
+         +     create?: UserCreateWithoutGeneralAccountInput | UserUncheckedCreateWithoutGeneralAccountInput,
+         +     connectOrCreate?: UserCreateOrConnectWithoutGeneralAccountInput,
+         +     connect?: UserWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime,
+         ?   deposits?: {
+         ?     create?: GeneralDepositsCreateWithoutAccountInput | GeneralDepositsCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput | GeneralDepositsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralDepositsCreateOrConnectWithoutAccountInput | GeneralDepositsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralDepositsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralDepositsWhereUniqueInput | GeneralDepositsWhereUniqueInput
+         ?   },
+         ?   withdraws?: {
+         ?     create?: GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput | GeneralWithdrawalsUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: GeneralWithdrawalsCreateOrConnectWithoutAccountInput | GeneralWithdrawalsCreateOrConnectWithoutAccountInput,
+         ?     createMany?: GeneralWithdrawalsCreateManyAccountInputEnvelope,
+         ?     connect?: GeneralWithdrawalsWhereUniqueInput | GeneralWithdrawalsWhereUniqueInput
+         ?   },
+         ?   chequeBook?: {
+         ?     create?: ChequeBooksCreateWithoutAccountInput | ChequeBooksUncheckedCreateWithoutAccountInput,
+         ?     connectOrCreate?: ChequeBooksCreateOrConnectWithoutAccountInput,
+         ?     connect?: ChequeBooksWhereUniqueInput
+         ?   }
+           }
+         })
+
+Argument user for data.user is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+
+230721	14:45:44	 aa92c5de-79de-41d5-a6d5-69734cfe6ae7	500	
+Invalid `prisma.generalAccount.update()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:33:29
+
+  30 
+  31 async addSuspension(date, accountId) {
+  32   const [data, error] = await TryCatchHelper(() =>
+→ 33     prisma.generalAccount.update({
+           where: {
+         ?   id?: String,
+         ?   accountNumber?: Int,
+         ?   userId?: String,
+         ?   userName?: String,
+         ?   userId_userName?: GeneralAccountUserIdUserNameCompoundUniqueInput
+           },
+           data: {
+             suspensionDuration: new Date('1970-01-01T01:00:00.000Z')
+           }
+         })
+
+Argument where of type GeneralAccountWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	14:50:06	 62fb039e-e869-4476-a7a0-952ff559249c	500	
+Invalid `prisma.generalAccount.update()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:33:29
+
+  30 
+  31 async addSuspension(date, accountId) {
+  32   const [data, error] = await TryCatchHelper(() =>
+→ 33     prisma.generalAccount.update({
+           where: {
+         ?   id?: String,
+         ?   accountNumber?: Int,
+         ?   userId?: String,
+         ?   userName?: String,
+         ?   userId_userName?: GeneralAccountUserIdUserNameCompoundUniqueInput
+           },
+           data: {
+             suspensionDuration: new Date('1970-01-01T00:01:00.000Z')
+           }
+         })
+
+Argument where of type GeneralAccountWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+
+230721	14:52:01	 d12e5933-2410-403d-8429-f2c8d2d8154d	500	
+Invalid `prisma.generalAccount.update()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\GeneralAccount.js:33:29
+
+  30 
+  31 async addSuspension(date, accountId) {
+  32   const [data, error] = await TryCatchHelper(() =>
+→ 33     prisma.generalAccount.update({
+           where: {
+         ?   id?: String,
+         ?   accountNumber?: Int,
+         ?   userId?: String,
+         ?   userName?: String,
+         ?   userId_userName?: GeneralAccountUserIdUserNameCompoundUniqueInput
+           },
+           data: {
+             suspensionDuration: new Date('1970-01-01T00:01:00.000Z')
+           }
+         })
+
+Argument where of type GeneralAccountWhereUniqueInput needs at least one argument. Available args are listed in green.
+
+Note: Lines with ? are optional.
+
+

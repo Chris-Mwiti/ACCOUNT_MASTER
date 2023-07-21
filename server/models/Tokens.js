@@ -1,5 +1,6 @@
 const prisma = require("../configs/prismaConfigs");
 const prismaErrHandler = require("../errors/handlers/prismaErrHandler");
+const recordIdGenerator = require("../generators/recordIdGen");
 const TryCatchHelper = require("../helpers/TryCatch");
 
 class RefreshTokenModel {
@@ -13,6 +14,7 @@ class RefreshTokenModel {
     const [data, error] = await TryCatchHelper(() =>
       this.tokenClient.create({
         data: {
+          id: recordIdGenerator("TK"),
           token: this.token,
           userId: this.userId,
         },
@@ -22,10 +24,10 @@ class RefreshTokenModel {
     return data
   }
 
-  async getRefreshToken(){
+  async getRefreshToken(token){
     const [data,error] = await TryCatchHelper(() => this.tokenClient.findUnique({
         where:{
-            token: this.token
+            token: token
         }
     }))
     if (error) return prismaErrHandler(error);
