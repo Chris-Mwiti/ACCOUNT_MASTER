@@ -9,7 +9,7 @@ const TryCatchHelper = async (func) => {
         error = err
     }
 
-    return [data,error]
+    return {data,error}
 }
 
 module.exports = TryCatchHelper

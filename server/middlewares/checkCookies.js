@@ -11,7 +11,7 @@ async function checkCookies(req, res, next) {
   if (cookies.refreshToken && !cookies.accessToken) {
     const tokenModel = new RefreshTokenModel();
     const { refreshToken } = cookies;
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       tokenModel.getRefreshToken(refreshToken)
     );
     if (error)

@@ -13,7 +13,7 @@ class GeneralAccount {
   }
 
   async createAccount() {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.generalAccount.create({
         data: {
           id: recordIdGenerator("GEN"),
@@ -28,38 +28,8 @@ class GeneralAccount {
     return data;
   }
 
-  async addSuspension(date, accountId) {
-    const [data, error] = await TryCatchHelper(() =>
-      prisma.generalAccount.update({
-        where: {
-          id: accountId,
-        },
-        data: {
-          suspensionDuration: date,
-          status: "suspended"
-        },
-      })
-    );
-    if (error) prismaErrHandler(error);
-    return data
-  }
-
-  async removeSuspension(accountId){
-    const [data,error] = await TryCatchHelper(() => prisma.generalAccount.update({
-      where:{
-        id: accountId
-      },
-      data:{
-        suspensionDuration: null,
-        status: "active"
-      }
-    }))
-    if(error) prismaErrHandler(error)
-    return data
-  }
-
   async getAccountInfoById(accountId) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.generalAccount.findUnique({
         where: {
           id: accountId,
@@ -74,8 +44,20 @@ class GeneralAccount {
     return data;
   }
 
+  async getAccountByUserId(userId) {
+    const {data, error} = await TryCatchHelper(() =>
+      prisma.generalAccount.findUnique({
+        where: {
+          userId: userId,
+        }
+      })
+    );
+    if(error) prismaErrHandler(error)
+    return data
+  }
+
   async getAccounts() {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.generalAccount.findMany()
     );
     if (error) prismaErrHandler(error);
@@ -83,7 +65,7 @@ class GeneralAccount {
   }
 
   async updateAccountById(accountId) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.generalAccount.update({
         where: {
           id: accountId,
@@ -98,8 +80,44 @@ class GeneralAccount {
     return data;
   }
 
+  async updateAccountBalance(accountId){
+
+  }
+
+  async addSuspension(date, accountId) {
+    const {data, error} = await TryCatchHelper(() =>
+      prisma.generalAccount.update({
+        where: {
+          id: accountId,
+        },
+        data: {
+          suspensionDuration: date,
+          status: "suspended",
+        },
+      })
+    );
+    if (error) prismaErrHandler(error);
+    return data;
+  }
+
+  async removeSuspension(accountId) {
+    const {data, error} = await TryCatchHelper(() =>
+      prisma.generalAccount.update({
+        where: {
+          id: accountId,
+        },
+        data: {
+          suspensionDuration: null,
+          status: "active",
+        },
+      })
+    );
+    if (error) prismaErrHandler(error);
+    return data;
+  }
+
   async deleteAccountById(accountId) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.generalAccount.delete({
         where: {
           id: accountId,

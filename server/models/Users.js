@@ -16,7 +16,7 @@ class UsersModel {
   }
 
   async createNewUser() {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.user.create({
         data: {
           id: recordldGenerator("USR"),
@@ -37,13 +37,13 @@ class UsersModel {
   }
 
   async getUsers() {
-    const [data, error] = await TryCatchHelper(() => prisma.user.findMany());
+    const {data, error} = await TryCatchHelper(() => prisma.user.findMany());
     if (error) return prismaErrHandler(error);
     return data;
   }
 
   async getUserById(id) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.user.findUnique({
         where: {
           id: id,
@@ -55,7 +55,7 @@ class UsersModel {
   }
 
   async getUserByUsrName(username) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.user.findUnique({
         where: {
           userName: username,
@@ -67,7 +67,7 @@ class UsersModel {
   }
 
   async updateUser(id) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.user.update({
         where: {
           id: id,
@@ -87,7 +87,7 @@ class UsersModel {
   }
 
   async deleteUser(id) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.user.delete({
         where: {
           id: id,

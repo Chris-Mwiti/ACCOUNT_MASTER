@@ -19,7 +19,7 @@ class SuspendController {
       const susDuration = Date.now() + 1 * 60 * 1000
       const susTimeStamp = new Date(susDuration);
       const model = this.accType == "general" ? new GeneralAccount() : new SavingsAccount();
-      const [data, error] = await TryCatchHelper(() =>
+      const {data, error} = await TryCatchHelper(() =>
         model.addSuspension(susTimeStamp,accID)
       );
       if (error) return new Error("Error while suspending account");
@@ -35,7 +35,7 @@ class SuspendController {
     const currTimeStamp = Date.now()
     const dateToMilliSec = Date.parse(this.date);
     if(currTimeStamp >= dateToMilliSec){
-        const [data,error] = await TryCatchHelper(() => model.removeSuspension(accId));
+        const {data,error} = await TryCatchHelper(() => model.removeSuspension(accId));
         if (error){
             console.log(error);
             return new Error("Error while deleting suspension of account")

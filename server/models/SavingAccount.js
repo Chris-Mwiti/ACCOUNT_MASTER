@@ -29,7 +29,7 @@ class SavingsAccount {
   }
 
   async getAccountInfoById(accountId) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.savingsAccount.findUnique({
         where: {
           id: accountId,
@@ -44,8 +44,20 @@ class SavingsAccount {
     return data;
   }
 
+  async getAccountByUserId(userId) {
+    const {data, error} = await TryCatchHelper(() =>
+      prisma.savingsAccount.findUnique({
+        where: {
+          userId: userId,
+        },
+      })
+    );
+    if(error) prismaErrHandler(error)
+    return data
+  }
+
   async getAccounts() {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.generalAccount.findMany()
     );
     if (error) prismaErrHandler(error);
@@ -53,7 +65,7 @@ class SavingsAccount {
   }
 
   async updateAccountById(accountId) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.savingsAccount.update({
         where: {
           id: accountId,
@@ -68,8 +80,40 @@ class SavingsAccount {
     return data;
   }
 
+  async addSuspension(date, accountId) {
+    const {data, error} = await TryCatchHelper(() =>
+      prisma.savingsAccount.update({
+        where: {
+          id: accountId,
+        },
+        data: {
+          suspensionDuration: date,
+          status: "suspended",
+        },
+      })
+    );
+    if (error) prismaErrHandler(error);
+    return data;
+  }
+
+  async removeSuspension(accountId) {
+    const {data, error} = await TryCatchHelper(() =>
+      prisma.savingsAccount.update({
+        where: {
+          id: accountId,
+        },
+        data: {
+          suspensionDuration: null,
+          status: "active",
+        },
+      })
+    );
+    if (error) prismaErrHandler(error);
+    return data;
+  }
+
   async deleteAccountById(accountId) {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.savingsAccount.delete({
         where: {
           id: accountId,

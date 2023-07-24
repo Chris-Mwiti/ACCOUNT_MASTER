@@ -12,7 +12,7 @@ class AdminController{
 
     async getUsers(){
         const usersModel = new UsersModel();
-        const [data,error] = await TryCatchHelper(() => usersModel.getUsers());
+        const {data,error} = await TryCatchHelper(() => usersModel.getUsers());
         if(error) return this.res.status(500).json({err: "Error while fetching users"});
         const filteredData = filterUserDetails(data);
         new ResponseHandlers(filteredData,this.res).getResponse();
@@ -20,7 +20,7 @@ class AdminController{
 
     async getUserById(){
         const usersModel = new UsersModel();
-        const [data,error] = await TryCatchHelper(() => usersModel.getUserById(this.userId));
+        const {data,error} = await TryCatchHelper(() => usersModel.getUserById(this.userId));
         if(error) return this.res.status(500).json({err: "Error while fetching user"});
         const filteredUserInfo = filterUserDetails(data);
         new ResponseHandlers(filteredUserInfo,this.res).getResponse();
@@ -32,7 +32,7 @@ class AdminController{
 
     async deleteUserById(){
         const usersModel = new UsersModel();
-        const [data,error] = await TryCatchHelper(() => usersModel.deleteUser(this.userId));
+        const {data,error} = await TryCatchHelper(() => usersModel.deleteUser(this.userId));
         if(error) return this.res.status(500).json({err: "Error while deleting user"});
         new ResponseHandlers(data,this.res).deleteResponse();
     }

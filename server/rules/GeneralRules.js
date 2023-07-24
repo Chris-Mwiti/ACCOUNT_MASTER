@@ -21,7 +21,7 @@ class GeneralRules{
         for (let acc in this.accountsInfo){
             const { modifiedAt,id } = this.accountsInfo[acc];
             const suspendController = new SuspendController(this.accType,modifiedAt);
-            const [data,error] = await TryCatchHelper(() => suspendController.generalSuspension(id));
+            const {data,error} = await TryCatchHelper(() => suspendController.generalSuspension(id));
             if (error) return false
             return true
         }
@@ -34,7 +34,7 @@ class GeneralRules{
             const { suspensionDuration, id } = this.accountsInfo[acc];
             console.log(suspensionDuration);
             const suspendController = new SuspendController(this.accType,suspensionDuration);
-            const [data,error] = await TryCatchHelper(() => suspendController.removeSuspension(id));
+            const {data,error} = await TryCatchHelper(() => suspendController.removeSuspension(id));
             if(error) return false
             return true
         }

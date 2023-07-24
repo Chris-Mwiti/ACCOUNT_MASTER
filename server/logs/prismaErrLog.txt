@@ -815,3 +815,30 @@ Argument where of type GeneralAccountWhereUniqueInput needs at least one argumen
 Note: Lines with ? are optional.
 
 
+230722	03:24:17	 802236f1-d845-4561-afa1-8b1de59c8e84	500	
+Invalid `this.depModel.create()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Deposits.js:15:21
+
+  12 
+  13 async makeDeposit(){
+  14   const {data, error} = await TryCatchHelper(() =>
+→ 15     this.depModel.create({
+           data: {
+             id: 'DEP_3e17a29c-bb74-47f7-93a3-eade298545be',
+             amount: 300,
+         +   account: {
+         +     create?: GeneralAccountCreateWithoutDepositsInput | GeneralAccountUncheckedCreateWithoutDepositsInput,
+         +     connectOrCreate?: GeneralAccountCreateOrConnectWithoutDepositsInput,
+         +     connect?: GeneralAccountWhereUniqueInput
+         +   },
+         ?   status?: String,
+         ?   createdAt?: DateTime,
+         ?   modifiedAt?: DateTime
+           }
+         })
+
+Argument account for data.account is missing.
+
+Note: Lines with + are required, lines with ? are optional.
+
+

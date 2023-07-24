@@ -11,7 +11,7 @@ class RefreshTokenModel {
   }
 
   async addRefreshToken() {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       this.tokenClient.create({
         data: {
           id: recordIdGenerator("TK"),
@@ -25,7 +25,7 @@ class RefreshTokenModel {
   }
 
   async getRefreshToken(token){
-    const [data,error] = await TryCatchHelper(() => this.tokenClient.findUnique({
+    const {data,error} = await TryCatchHelper(() => this.tokenClient.findUnique({
         where:{
             token: token
         }

@@ -1,10 +1,10 @@
-const GeneralAccountController = require('../../controllers/GeneralAccountController');
+const GeneralAccountController = require('../../controllers/GeneralAccount/GeneralAccountController');
 const TryCatchHelper = require('../../helpers/TryCatch');
 const OnMountAdmin = require('../../hooks/onMountAdmin');
 const checkCookies = require('../../middlewares/checkCookies');
 const verifyJwt = require('../../middlewares/verifyJwt');
 const { verifyAdminRole } = require('../../middlewares/verifyRoles');
-;
+
 
 const router = require('express').Router();
 
@@ -15,7 +15,7 @@ router.use(verifyAdminRole);
 router.route('/')
     .get(async(req,res) =>{
         const generalAccController = new GeneralAccountController(req,res);
-        const [data,error] = await TryCatchHelper(() => generalAccController.getAccounts());
+        const {data,error} = await TryCatchHelper(() => generalAccController.getAccounts());
         if(error){
             console.error(error);
             return res.status(500).json({err: "Error validating users account"})

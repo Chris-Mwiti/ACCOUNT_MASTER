@@ -16,7 +16,7 @@ class RegisterController {
         const {firstname,lastname,username,email,password,role,idNumber,phone} = this.req.body
         const hashedPwd = await bcrypt.hash(password, 10);
         const userModel = new UsersModel(firstname, lastname, username, email, hashedPwd, role, idNumber,phone);
-        const [data,error] = await TryCatchHelper(() => userModel.createNewUser());
+        const {data,error} = await TryCatchHelper(() => userModel.createNewUser());
         if(error) return this.res.status(500).json({err: "Error while creating user"});
         new ResponseHandler(data,this.res).postResponse()
     }
@@ -24,7 +24,7 @@ class RegisterController {
     async logInUser(){
       const {username,password} = this.req.body;
       const userModel = new UsersModel()
-      const [data,error] = await TryCatchHelper(() => userModel.getUserByUsrName(username));
+      const {data,error} = await TryCatchHelper(() => userModel.getUserByUsrName(username));
       if(error) return this.res.status(500).json({err: "Error while fetching user"});
       if(data == null) return this.res.status(401).json({msg: "Wrong Username"});
 

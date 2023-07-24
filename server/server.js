@@ -8,8 +8,7 @@ const cors = require('cors');
 const { logger } = require('./middlewares/logger');
 const errHandler = require('./middlewares/errHandler');
 const cookieParser = require('cookie-parser');
-const GeneralAccountController = require('./controllers/GeneralAccountController');
-const GeneralRules = require('./rules/GeneralRules');
+
 
 // Form data urlencodede parsing
 app.use(cookieParser())
@@ -33,6 +32,7 @@ app.use('/admin/api/users', require('./routes/admin/api/users'));
 app.use('/user/register', require('./routes/users/register'));
 app.use('/user/login', require('./routes/users/login'));
 app.use('/user/api/genAcc',require('./routes/users/api/generalAcc'));
+app.use('/user/api/genAcc/deposit', require('./routes/users/api/generalAcc'));
 
 
 app.use(errHandler)
