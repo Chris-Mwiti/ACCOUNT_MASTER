@@ -19,6 +19,7 @@ class GeneralRules{
         const isAccsValid = this.validater();
         if (!isAccsValid) return false;
         for (let acc in this.accountsInfo){
+            // @TODO:Check if account is active using either the last deposit or withdrawal
             const { modifiedAt,id } = this.accountsInfo[acc];
             const suspendController = new SuspendController(this.accType,modifiedAt);
             const {data,error} = await TryCatchHelper(() => suspendController.generalSuspension(id));

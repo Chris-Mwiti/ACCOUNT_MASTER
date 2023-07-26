@@ -13,7 +13,7 @@ class SavingsAccount {
   }
 
   async createAccount() {
-    const [data, error] = await TryCatchHelper(() =>
+    const {data, error} = await TryCatchHelper(() =>
       prisma.savingsAccount.create({
         data: {
           id: recordIdGenerator("SAV"),
@@ -78,6 +78,21 @@ class SavingsAccount {
     );
     if (error) prismaErrHandler(error);
     return data;
+  }
+
+  async updateAccountBalance(accountId, balance) {
+    const { data, error } = await TryCatchHelper(() =>
+      prisma.savingsAccount.update({
+        where: {
+          id: accountId,
+        },
+        data: {
+          balance: balance,
+        },
+      })
+    );
+    if(error) prismaErrHandler(error);
+    return data
   }
 
   async addSuspension(date, accountId) {

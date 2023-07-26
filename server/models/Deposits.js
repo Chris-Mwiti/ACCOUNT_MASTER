@@ -40,6 +40,9 @@ class DepositsModel{
         where: {
           id: depositId,
         },
+        include:{
+          account: true
+        }
       })
     );
     if (error) prismaErrHandler(error);

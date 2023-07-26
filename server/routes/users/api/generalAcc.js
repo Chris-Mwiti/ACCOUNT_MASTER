@@ -5,6 +5,7 @@ const verifyJwt = require("../../../middlewares/verifyJwt");
 const { verifyUserRole } = require("../../../middlewares/verifyRoles");
 
 const router = require("express").Router();
+const ACC_TYPE = "general";
 
 router.use(checkCookies);
 router.use(verifyJwt);
@@ -17,7 +18,7 @@ router.route("/").post(async (req, res) => {
 
 router.route("/deposit")
   .post(async(req,res) => {
-    const depositController = new DepositController(req,res,"general");
+    const depositController = new DepositController(req,res,ACC_TYPE);
     await depositController.makeDeposit()
   })
 module.exports = router;
