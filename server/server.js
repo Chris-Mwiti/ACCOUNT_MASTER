@@ -8,6 +8,7 @@ const cors = require('cors');
 const { logger } = require('./middlewares/logger');
 const errHandler = require('./middlewares/errHandler');
 const cookieParser = require('cookie-parser');
+const compoundInterestController = require('./controllers/CompoundInterest');
 
 
 // Form data urlencodede parsing
@@ -19,6 +20,14 @@ app.use(express.urlencoded({extended: false }));
 app.use(cors(corsOptions));
 // app.use(logger)
 
+try{
+   async function compoundInterest(){
+     await compoundInterestController()
+   }
+   setInterval(() => compoundInterest(), 3000);
+}catch(err){
+    console.error(err)
+}
 // Routes
 
 // Admin Routes
@@ -28,6 +37,8 @@ app.use('/admin/login', require('./routes/admin/login'));
 app.use('/admin/api/users', require('./routes/admin/api/users'));
 app.use('/admin/api/genDeposits', require('./routes/admin/api/generalDeposits'));
 app.use('/admin/api/savDeposits', require('./routes/admin/api/savingsDeposits'));
+app.use('/admin/api/genWithdraws', require('./routes/admin/api/generalWithdraws'));
+app.use('/admin/api/savWithdraws', require('./routes/admin/api/savingsWithdrawals'));
 
 
 // User Routes

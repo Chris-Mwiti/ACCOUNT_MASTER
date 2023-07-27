@@ -4,6 +4,7 @@ const GeneralAccount = require("../../models/GeneralAccount");
 const SavingsAccount = require("../../models/SavingAccount");
 const ResponseHandlers = require("../../helpers/modelResponseHandlers");
 const ResponseHandler = require("../../helpers/modelResponseHandlers");
+const SmsController = require("../SmsController");
 
 class DepositController {
   constructor(req, res, accType) {
@@ -52,12 +53,13 @@ class DepositController {
         .json({ err: "Error while fetching deposti details" });
     if (!getDepositInfoRes)
       return this.res.status(400).json({ err: "Invalid get deposit request" });
+      console.log(getDepositInfoRes)
 
     const {
       amount,
-      account: { id: accountId, balance },
+      account: { id: accountId, balance, user: { phone } },
     } = getDepositInfoRes;
-
+    
     const newAccBalance = amount + balance;
     const { data: updateDepositRes, error: errUpdateDeposit } =
       await TryCatchHelper(() =>
@@ -72,10 +74,12 @@ class DepositController {
       () => this.accountModel.updateAccountBalance(accountId, newAccBalance)
     );
 
-    if (errUpdateDeposit)
+    if (errUpdatingAcc)
       return this.res
         .status(500)
         .json({ err: "Unexpected Error please try again later" });
+    
+    SmsController(phone, `Your deposit of id ${this.depositId} has been completed. New Account balance is ${newAccBalance}`);
 
     // @TODO: Notify users via twilio after a successfully deposit a successful transactions
     new ResponseHandlers(updateAccRes, this.res).updateResponse();
@@ -98,8 +102,11 @@ class DepositController {
     const { data: getDepositRes, error: errGettingDeposit } =
       await TryCatchHelper(() => depositModel.getDepositById(this.depositId));
 
-    if(errGettingDeposit) return this.res.status(500).json({err: "Error while fetching deposit details"});
-    new ResponseHandler(getDepositRes,this.res).getResponse();
+    if (errGettingDeposit)
+      return this.res
+        .status(500)
+        .json({ err: "Error while fetching deposit details" });
+    new ResponseHandler(getDepositRes, this.res).getResponse();
   }
 
   async deleteDeposit() {

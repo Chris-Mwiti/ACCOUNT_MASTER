@@ -842,3 +842,86 @@ Argument account for data.account is missing.
 Note: Lines with + are required, lines with ? are optional.
 
 
+230726	19:16:20	 1b4041df-2977-4ee9-8fb6-21a51df965df	500	
+Invalid `this.accModel.count()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\Withdrawals.js:91:21
+
+  88 // Used by the Rules Controller
+  89 async countWithdrawalsByDate(date, accountId) {
+  90   const { data: countRes, error: errCountRes } = await TryCatchHelper(() =>
+→ 91     this.accModel.count({
+           select: {
+             _count: {
+               select: {
+                 accountId: 'SAV_ce59ab57-e12d-4308-8313-ea6365e3e72e'
+                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+               }
+             }
+           },
+           where: {
+             modifiedAt: {
+               lte: new Date('2023-07-25T00:00:00.000Z')
+             }
+           }
+         })
+
+
+Invalid value 'SAV_ce59ab57-e12d-4308-8313-ea6365e3e72e' of type String for field accountId on model SavingsWithdrawalsCountAggregateOutputType. Expected either true or false.
+
+
+230727	08:22:40	 b4f562ee-94cc-42e6-8833-bbc340eaa66a	500	
+Invalid `prisma.savingsAccount.update()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\SavingAccount.js:85:29
+
+  82 
+  83 async updateAccountBalance(accountId, balance) {
+  84   const { data, error } = await TryCatchHelper(() =>
+→ 85     prisma.savingsAccount.update({
+           where: {
+             id: 'GEN_fa76aeab-2b6b-4118-bf05-51ec82ae9dbe'
+           },
+           data: {
+             balance: '10000.27'
+                      ~~~~~~~~~~
+           }
+         })
+
+Argument balance: Got invalid value '10000.27' on prisma.updateOneSavingsAccount. Provided String, expected Int or IntFieldUpdateOperationsInput.
+type IntFieldUpdateOperationsInput {
+  set?: Int
+  increment?: Int
+  decrement?: Int
+  multiply?: Int
+  divide?: Int
+}
+
+
+
+230727	08:26:04	 eb6ba21b-720b-479f-9db0-f23962ffc7f0	500	
+Invalid `prisma.savingsAccount.update()` invocation in
+G:\JS PROJECTS\WEBSITE PROJECTS\ACCOUNT_MASTER\server\models\SavingAccount.js:85:29
+
+  82 
+  83 async updateAccountBalance(accountId, balance) {
+  84   const { data, error } = await TryCatchHelper(() =>
+→ 85     prisma.savingsAccount.update({
+           where: {
+             id: 'GEN_fa76aeab-2b6b-4118-bf05-51ec82ae9dbe'
+           },
+           data: {
+             balance: 1000.27
+                      ~~~~~~~
+           }
+         })
+
+Argument balance: Got invalid value 1000.27 on prisma.updateOneSavingsAccount. Provided Float, expected Int or IntFieldUpdateOperationsInput.
+type IntFieldUpdateOperationsInput {
+  set?: Int
+  increment?: Int
+  decrement?: Int
+  multiply?: Int
+  divide?: Int
+}
+
+
+

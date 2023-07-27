@@ -36,12 +36,16 @@ class DepositsModel{
 
   async getDepositById(depositId) {
     const {data, error} = await TryCatchHelper(() =>
-      this.depModel.findUnique({
+      prisma.generalDeposits.findUnique({
         where: {
           id: depositId,
         },
         include:{
-          account: true
+          account: {
+            include:{
+              user: true
+            }
+          }
         }
       })
     );

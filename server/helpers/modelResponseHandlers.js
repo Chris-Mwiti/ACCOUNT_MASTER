@@ -17,6 +17,13 @@ class ResponseHandler {
     return this.res.status(201).json({ msg: "Your request has been successfully placed" });
   }
 
+  withdrawResponse(){
+    if (this.data == undefined)
+      return this.res.status(500).json({ error: "Error while making transaction" });
+
+    return this.res.status(201).json({ msg: "Your request has been successfully placed" });
+  }
+
   getResponse() {
     if (this.data == undefined)
       return this.res.status(500).json({ error: "Server side error" });

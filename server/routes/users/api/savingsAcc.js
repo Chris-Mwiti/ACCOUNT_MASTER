@@ -1,6 +1,7 @@
 const router = require('express').Router()
 const DepositController = require('../../../controllers/GeneralAccount/DepostController');
 const SavingsAccountController = require('../../../controllers/SavingsAccount/SavingsController');
+const WithdrawalsController = require('../../../controllers/WithdrawalsController');
 const checkCookies = require('../../../middlewares/checkCookies')
 const verifyJwt = require('../../../middlewares/verifyJwt');
 const {verifyUserRole}= require('../../../middlewares/verifyRoles')
@@ -21,5 +22,9 @@ router.route('/deposits')
         await depositController.makeDeposit();
     })
 
-
+router.route('/withdraws')
+  .post(async(req,res) => {
+    const withdrawController = new WithdrawalsController(req,res,ACC_TYPE);
+    await withdrawController.makeWithdrawal();
+  })
 module.exports = router

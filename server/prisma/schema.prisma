@@ -78,7 +78,7 @@ model ChequeBooks{
 
 model SavingsAccount{
   id String @id
-  balance Int
+  balance Float
   accountNumber Int @unique
   status String @default("active")
   createdAt DateTime @default(now())

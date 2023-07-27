@@ -36,7 +36,7 @@ class SavingsAccount {
         },
         include: {
           deposits: true,
-          withdraws: true,
+          withdrawals: true
         },
       })
     );
@@ -58,7 +58,7 @@ class SavingsAccount {
 
   async getAccounts() {
     const {data, error} = await TryCatchHelper(() =>
-      prisma.generalAccount.findMany()
+      prisma.savingsAccount.findMany()
     );
     if (error) prismaErrHandler(error);
     return data;

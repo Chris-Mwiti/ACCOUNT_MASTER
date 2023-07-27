@@ -1,5 +1,6 @@
 const DepositController = require("../../../controllers/GeneralAccount/DepostController");
 const GeneralAccountController = require("../../../controllers/GeneralAccount/GeneralAccountController");
+const WithdrawalsController = require("../../../controllers/WithdrawalsController");
 const checkCookies = require("../../../middlewares/checkCookies");
 const verifyJwt = require("../../../middlewares/verifyJwt");
 const { verifyUserRole } = require("../../../middlewares/verifyRoles");
@@ -20,5 +21,11 @@ router.route("/deposit")
   .post(async(req,res) => {
     const depositController = new DepositController(req,res,ACC_TYPE);
     await depositController.makeDeposit()
+  })
+
+router.route('/withdraw')
+  .post(async(req,res) => {
+    const withdrawController = new WithdrawalsController(req,res,ACC_TYPE);
+    await withdrawController.makeWithdrawal();
   })
 module.exports = router;
